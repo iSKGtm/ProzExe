@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Formulário de Cadastro</h1>
+    <form action="index.html">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="digite seu nome...">
+        <abbr title="Obrigatório">*</abbr>
+        <br>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="digite seu e-mail...">
+        <abbr title="Obrigatório">*</abbr>
+        <br>
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="digite seu telefone...">
+        <br>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" placeholder="digite sua senha...">
+        <abbr title="Obrigatório">*</abbr>
+
+        <fieldset>
+            <legend>Qual sua comida preferida?</legend>
+            <ul>
+              <li>
+                <label for="sopa">Sopa</label>
+                <input type="radio" id="sopa" name="sopa" value="sopa" checked />
+              </li>
+              <li>
+                <label for="hamburger">Hamburguer</label>
+                <input type="radio" id="hamburger" name="hamburger" value="hamburger"/>
+              </li>
+              <li>
+                <label for="pizza">Pizza</label>
+                <input type="radio" id="pizza" name="meal" value="pizza" />
+              </li>
+            </ul>
+          </fieldset>
+          
+
+    </form>
+</body>
+</html>
