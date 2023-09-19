@@ -11,3 +11,12 @@ a {
 a:hover {
     color: darkorange;
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+}
+
+
