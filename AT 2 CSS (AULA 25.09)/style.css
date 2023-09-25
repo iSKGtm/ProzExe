@@ -42,10 +42,12 @@ div {
   transform: translateY(0px);
   text-align: center;
   box-shadow: 0 0 10px #00000042;
+  transition: transform 300ms, box-shadow 300ms;
 }
 
 div:hover {
   transform: translateY(-10px);
+  transition: transform 300ms, box-shadow 300ms;
   box-shadow: 0 0 10px #000000c9;
 }
 
