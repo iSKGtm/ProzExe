@@ -4,12 +4,15 @@
   padding: 0;
 }
 
+body {
+  background-color: #59378D;
+}
+
 header {
   background-color: lightgray;
   display: flex;
   justify-content: space-between;
   padding: 16px;
-  margin-bottom: 16px;
 }
 
 nav {
@@ -25,22 +28,63 @@ ul {
 nav ul li {
   padding-left: 16px;
   list-style-type: none;
+  color: #59378D;
 }
 
 main {
-  margin: 34px;
+  width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 800;
+  padding-bottom: 0px;
+  padding-top: 30px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+h3 {
+  padding-bottom: 20px;
+  font-size: 23px;
+}
+
+h1, h2, h3, p {
+  color: white;
+}
+
+aside {
+  margin: 0 30px;
+  padding: 0 20px;
+  padding-left: 70px;
+  color: white;
+}
+
+section {
+  margin: 0 40px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: #59378D;
 }
 
 div {
-  background: orange;
-  width: 200px !important;
+  background: rgb(247, 148, 0);
+  color: white;
+  width: 300px !important;
   height: 200px;
   border-radius: 10px;
   padding: 20px;
   width: 300px;
   user-select: none;
   transform: translateY(0px);
-  text-align: center;
+  text-align: left;
   box-shadow: 0 0 10px #00000042;
   transition: transform 300ms, box-shadow 300ms;
 }
@@ -52,21 +96,14 @@ div:hover {
 }
 
 footer {
-  background-color: lightgray;
+  background-color: rgb(27, 27, 27);
+  color: white;
   padding: 16px;
-  margin: 20px;
   justify-content: center;
   font-family: 'Maven Pro', sans-serif;
   font-weight: 800;
   font-size: larger;
-}
-
-section {
-  margin: 0px;
-  padding: 20px;
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  justify-content: center;
-  background-color: lightgray;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
