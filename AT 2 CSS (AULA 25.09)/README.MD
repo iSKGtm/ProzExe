@@ -1,6 +1,2 @@
-#AULA CSS, PARTICIPANTES:
-
-Anthony Max
-Luan Guilherme Dantas
-Laila Taha
-Eduardo Alves
+AULA CSS, PARTICIPANTES:
+Anthony Max, Luan Guilherme Dantas, Laila Taha & Eduardo Alves
