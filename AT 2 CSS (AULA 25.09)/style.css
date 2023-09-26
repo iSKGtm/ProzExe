@@ -15,10 +15,6 @@ header {
   padding: 16px;
 }
 
-nav {
-  /* background-color: #EF7D19; */
-}
-
 ul {
   display: flex;
   height: 100%;
@@ -61,6 +57,7 @@ aside {
   margin: 0 30px;
   padding: 0 20px;
   padding-left: 70px;
+  margin-bottom: 30px;
   color: white;
 }
 
