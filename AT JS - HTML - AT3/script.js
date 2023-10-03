@@ -12,7 +12,7 @@ let produto = document.createElement("div");
 
 produto.innerHTML = `
   <div>
-    <h2>Whisky Jack Daniels 150 Anos/h2>
+    <h2>Whisky Jack Daniels 150 Anos</h2>
     <p>1 Litro</p>
     <p id="valor">R$ 599.99</p>
   </div>
