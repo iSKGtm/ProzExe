@@ -11,4 +11,10 @@ button.style.backgroundColor = 'white';
 const names = document.querySelector("h4");
 names.innerText = "Nomes: Anthony Max, Alano Silva, Luan G Dantas, FELIPE RIBEIRO"
 
+const usernameInput = document.querySelector("#login-usuario")
+usernameInput.classList.add('error');
+
+const errorMessage = document.querySelector('.error-text');
+errorMessage.classList.add('visible');
+
 /* Anthony Max, Alano Silva, Luan G Dantas, FELIPE RIBEIRO */
