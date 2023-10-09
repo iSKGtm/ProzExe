@@ -8,4 +8,7 @@ button.style.border = '2px solid blue';
 button.style.borderRadius = '13px';
 button.style.backgroundColor = 'white';
 
+const names = document.querySelector("h4");
+names.innerText = "Nomes: Anthony Max, Alano Silva, Luan G Dantas, FELIPE RIBEIRO"
+
 /* Anthony Max, Alano Silva, Luan G Dantas, FELIPE RIBEIRO */
