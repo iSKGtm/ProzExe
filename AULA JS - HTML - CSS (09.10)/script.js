@@ -14,9 +14,15 @@ const names = document.querySelector("h4");
 names.innerText = "Nomes: Anthony Max, Alano Silva, Luan G Dantas, FELIPE RIBEIRO"
 
 const usernameInput = document.querySelector("#login-usuario")
-usernameInput.classList.add('error');
+usernameInput.classList.add('correct');
 
 const errorMessage = document.querySelector('.error-text');
-errorMessage.classList.add('visible');
+errorMessage.classList.add('none');
+
+const passInput = document.querySelector("#login-senha")
+passInput.classList.add('error');
+
+const passErrorMessage = document.querySelector('.error-textPass');
+passErrorMessage.classList.add('visible');
 
 /* Anthony Max, Alano Silva, Luan G Dantas, FELIPE RIBEIRO */

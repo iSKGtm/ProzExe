@@ -55,11 +55,19 @@ input.error {
 }
 
 input.correct {
+  border: solid 2px #206620;
   background-color: #BBCCBB;
   color: #206620;
 }
 
 .error-text {
+  display: none;
+  font-size: .8rem;
+  font-weight: 600;
+  color: #992020;
+}
+
+.error-textPass {
   display: none;
   font-size: .8rem;
   font-weight: 600;
