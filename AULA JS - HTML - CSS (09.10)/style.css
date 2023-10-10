@@ -67,13 +67,6 @@ input.correct {
   color: #992020;
 }
 
-.error-textPass {
-  display: none;
-  font-size: .8rem;
-  font-weight: 600;
-  color: #992020;
-}
-
 .visible {
   display: block;
 }

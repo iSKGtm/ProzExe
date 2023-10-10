@@ -21,8 +21,8 @@ errorMessage.classList.add('none');
 
 const passInput = document.querySelector("#login-senha")
 passInput.classList.add('error');
+let errorTextElements = document.querySelectorAll('.error-text');
+errorTextElements[1].classList.add('visible');
 
-const passErrorMessage = document.querySelector('.error-textPass');
-passErrorMessage.classList.add('visible');
-
+ 
 /* Anthony Max, Alano Silva, Luan G Dantas, FELIPE RIBEIRO */
