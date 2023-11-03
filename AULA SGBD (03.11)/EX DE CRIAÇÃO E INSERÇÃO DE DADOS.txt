@@ -1,0 +1,24 @@
+create database ESCOLA (CRIAR BANCO DE DADOS COM NOME ESCOLA)
+
+use ESCOLA; (USAR BANCO DE DADOS ESCOLA)
+
+create table alunos(
+ id int unsigned not null auto increment,
+ nome varchar(35) not null,
+ matricula int(4) not null,
+ email varchar(35) not null,
+ endereco varchar(65) not null,
+ telefone int(10)
+ PRIMARY KEY (id)
+); (CRIAR TABELA ALUNO)
+
+
+(INSERIR DADOS DENTRO DE ALUNOS)
+INSERT INTO alunos (id, nome, matricula , email, endereco, telefone) VALUES (01, "João Carlos", 1234, "Jcarlos@gmail.com", "Rua 13 de maio", 1178254489);
+
+INSERT INTO alunos (id, nome, matricula , email, endereco, telefone) VALUES (02, "José Vitor", 2345, "Jvitor@gmail.com", "Rua da Saudade", 1178259589);
+
+INSERT INTO alunos (id, nome, matricula , email, endereco, telefone) VALUES (03, "Paulo André", 3456, "Pandr@gmail.com", "Rua do sol", 1178254495);
+
+
+(OBS: NÃO FICOU CLARO SE É NECESSARIO FAZER OUTRAS PARTES COMO NAS OUTRAS IMAGENS, FIZ APENAS O QUE ESTAVA DESCRITO DE ACORDO COM O TEXTO.)
