@@ -1,1 +1,28 @@
-TEMP
+CREATE DATABASE IF NOT EXISTS empresa;
+USE empresa;
+
+CREATE TABLE IF NOT EXISTS vendas (
+  id INT PRIMARY KEY,
+  data_venda DATE NOT NULL,
+  quantidade INT NOT NULL
+);
+
+INSERT INTO vendas (id, data_venda, quantidade) VALUES
+  (1, '2023-11-08', 3),
+  (2, '2023-11-09', 5),
+  (3, '2023-11-10', 2);
+
+DELIMITER;
+
+CREATE PROCEDURE LevantamentoDiario()
+BEGIN
+  SELECT 
+    data_venda,
+    SUM(quantidade) AS total_produtos_comprados
+  FROM vendas
+  GROUP BY data_venda;
+END $$
+
+DELIMITER;
+
+CALL LevantamentoDiario();
