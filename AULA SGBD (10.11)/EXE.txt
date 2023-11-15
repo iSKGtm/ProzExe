@@ -1,0 +1,39 @@
+CREATE TABLE IF NOT EXISTS produtos (
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR(35) NOT NULL,
+  codigo VARCHAR(50) UNIQUE NOT NULL,
+  qtd_estoque INT NOT NULL,
+  preco NUMERIC(10,2) NOT NULL
+);
+
+INSERT INTO produtos (nome, codigo, qtd_estoque, preco) 
+VALUES 
+  ('Feijão Maximo 1KG', '123456789050', 125, 6.99),
+  ('Cafe Três Corações', '123456789010', 95, 12.99),
+  ('Chocolate Twix 3x', '123456789010', 30, 4.29),
+ 
+SELECT * FROM produtos;
+
+CREATE TABLE IF NOT EXISTS vendas (
+  id SERIAL PRIMARY KEY,
+  produto_id INT REFERENCES produtos(id),
+  qtd_produto INT NOT NULL
+  data_venda DATE NOT NULL
+);
+
+INSERT INTO vendas (produto_id, qtd_produto, data_venda) 
+VALUES 
+  (1, 2, NOW()),
+  (3, 2, NOW()),
+  (3, 1, '2023-11-09'),
+  (2, 5, '2023-11-08'),
+
+DELIMITER $$
+CREATE PROCEDURE RelatorioDiarioVendas AS
+BEGIN
+  SELECT data_venda, SUM(qtd_produto) as total_produtos_comprados
+  FROM vendas v
+  GROUP BY data_venda
+  ORDER BY data_venda DESC;
+END $$
+DELIMITER;

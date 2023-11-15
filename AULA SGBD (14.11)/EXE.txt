@@ -21,7 +21,7 @@ BEGIN
     SUM(quantidade) AS total_produtos_comprados
   FROM vendas
   GROUP BY data_venda;
-END $$
+END
 
 DELIMITER;
 
