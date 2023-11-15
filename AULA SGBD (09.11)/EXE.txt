@@ -1,0 +1,31 @@
+CREATE DATABASE servicoLoja;
+USE servicoLoja;
+
+CREATE TABLE Clientes (
+    ClienteID INT PRIMARY KEY,
+    Nome VARCHAR(30),
+    Email VARCHAR(40)
+);
+
+CREATE TABLE Pedidos (
+    PedidoID INT PRIMARY KEY,
+    ClienteID INT,
+    Produto VARCHAR(30),
+    Quantidade INT,
+    FOREIGN KEY (ClienteID) REFERENCES Clientes(ClienteID)
+);
+
+INSERT INTO Clientes (ClienteID, Nome, Email) VALUES
+    (1, 'Anthony', 'anthony@email.com'),
+    (2, 'Max', 'max@email.com');
+    (3, 'Sena', 'sena@email.com');
+
+INSERT INTO Pedidos (PedidoID, ClienteID, Produto, Quantidade) VALUES
+    (101, 3, 'ProdutoA', 2),
+    (102, 2, 'ProdutoB', 1),
+    (103, 1, 'ProdutoC', 3);
+    (103, 2, 'ProdutoC', 2);
+
+SELECT Pedidos.PedidoID, Clientes.Nome, Pedidos.Produto, Pedidos.Quantidade
+FROM Pedidos
+JOIN Clientes ON Pedidos.ClienteID = Clientes.ClienteID;
