@@ -1,4 +1,5 @@
-{ "Feijão Maximo": {
+[
+    {
     "id": 1,
     "nome": "Feijão 1KG",
     "marca": "Maximo",
@@ -6,10 +7,8 @@
     "preço": 8.99,
     "quantidadeEstoque": 45,
     "disponivel": true
-    }
-}
-
-{ "Extrato de Tomate OLÉ": {
+    },
+    {
     "id": 2,
     "nome": "Extrato de Tomate OLÉ",
     "marca": "OLÉ",
@@ -17,16 +16,14 @@
     "preço": 2.59,
     "quantidadeEstoque": 70,
     "disponivel": true
-    }
-}
-
-{ "Arroz Tio João": {
+    },
+    {
     "id": 3,
     "nome": "Arroz Amarelo Tio João",
     "marca": "Tio João",
     "categoria":"Arroz",
-    "preço": 29.49
+    "preço": 29.49,
     "quantidadeEstoque": 0,
     "disponivel": false
-    }
-}
+    }    
+]
