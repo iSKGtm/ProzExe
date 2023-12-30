@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geek E-commerce</title>
+  <style>
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>REQUISIÇÃO POST </h1>
+  <h4>ADICIONANDO PRODUTO COM TIPO POST</h4>
+  <form id="formProduto">
+    <label for="nomeProduto">PRODUTO:</label>
+    <input type="text" id="nomeProduto" required>
+
+    <label for="valorProduto">VALOR:</label>
+    <input type="number" id="valorProduto" required>
+
+    <label for="descricaoProduto">DESCRIÇÃO:</label>
+    <textarea id="descricaoProduto" required></textarea>
+    <br>
+
+    <button type="button" onclick="enviarProduto()">Enviar</button>
+  </form>
+
+  <p id="feedback"></p>
+
+  <script>
+    async function enviarProduto() {
+      const nomeProduto = document.getElementById('nomeProduto').value;
+      const valorProduto = document.getElementById('valorProduto').value;
+      const descricaoProduto = document.getElementById('descricaoProduto').value;
+
+      const corpoRequisicao = {
+        produto: nomeProduto,
+        valor: valorProduto,
+        descricao: descricaoProduto
+      };
+
+      try {
+        const resposta = await fetch('https://httpbin.org/post', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(corpoRequisicao),
+        });
+
+        const dadosResposta = await resposta.json();
+
+        if (resposta.ok) {
+          document.getElementById('feedback').innerText = 'Produto cadastrado com sucesso!';
+          // Limpar os inputs
+          document.getElementById('formProduto').reset();
+        } else {
+          document.getElementById('feedback').innerText = `Erro: ${dadosResposta.message}`;
+        }
+      } catch (erro) {
+        document.getElementById('feedback').innerText = 'Erro na requisição.';
+      }
+    }
+  </script>
+</body>
+</html>
